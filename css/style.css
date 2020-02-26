@@ -1,0 +1,7 @@
+footer {
+  background-color: lightcoral;
+  display: grid;
+  justify-content: center;
+  color: lightgray;
+  list-style: inside;
+  margin-top: auto; }
