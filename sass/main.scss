@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    width: 80%;
+    margin: auto;
+    font-family: 'Barlow', ;
+}
+
+.bg {
+    height: 400px;
+    width: 50%;
+    background-color: hsl(207, 33%, 95%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    border-bottom-left-radius: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    &__logo {
+        margin: 10px;
+
+    }
+
+    &__lists {
+        margin: 10px;
+
+
+    }
+}
+
+.lists {
+    &__list {
+        margin: 0 20px;
+        font-size: 18px;
+        font-weight: 900;
+        position: relative;
+        color: hsl(230, 29%, 20%);
+
+        &--bfr {
+            margin-left: 90px;
+            color: hsl(230, 11%, 40%);
+
+
+            &::before {
+                content: ' ';
+                height: 7px;
+                width: 7px;
+                border-radius: 50%;
+                background-color: hsl(233, 6%, 73%);
+                position: absolute;
+                top: 10px;
+                right: 100px;
+
+
+
+            }
+        }
+
+
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    img {
+        width: 120%;
+        position: relative;
+        left: 15%;
+    }
+}
+
+.textarea {
+    margin-top: 50px;
+
+    &__bigh {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: hsl(230, 29%, 20%);
+        line-height: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__smallh {
+        font-size: 19px;
+        font-weight: 400;
+        color: hsl(230, 11%, 40%);
+        margin-bottom: 50px;
+        width: 55%;
+    }
+
+    &__btn {
+        padding: 14px 24px;
+        border: none;
+        background-color: hsl(0, 100%, 68%);
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 5px;
+        text-shadow: .5px .5px 1px white;
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            background-color: rgb(253, 107, 107);
+            box-shadow: 0 4px 8px 0 rgba(252, 105, 105, .2), 0 6px 20px 0 rgba(252, 105, 105, .2);
+        }
+    }
+
+}
