@@ -65,7 +65,7 @@ ul a {
   color: #242942;
   transition: all 300ms; }
   .lists__list:hover {
-    color: #ff5c5c; }
+    color: #ff5252; }
   .lists__list--bfr {
     margin-left: 90px;
     color: #5b5f71; }
@@ -102,14 +102,21 @@ ul a {
     margin-bottom: 20px; }
     .textarea__lists il {
       font-size: 17px;
-      margin-right: 10px;
+      margin-right: 2px;
+      margin-left: 2px;
+      padding: 4px 8px 5px;
       text-transform: uppercase;
-      color: #b6b7be; }
+      color: #b6b7be;
+      cursor: pointer;
+      box-sizing: border-box; }
     .textarea__lists .list1 {
       background-color: #242942;
       color: white;
-      padding: 3px 6px 4px;
-      border-radius: 15px; }
+      padding: 4px 8px 5px;
+      border-radius: 15px;
+      font-weight: bold;
+      transition: background-color .3s ease-out;
+      box-sizing: border-box; }
   .textarea__bigh {
     font-size: 50px;
     text-transform: uppercase;
