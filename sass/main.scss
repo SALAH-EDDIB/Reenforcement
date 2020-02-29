@@ -1,3 +1,15 @@
+@mixin mq($width) {
+
+
+    @media (max-width: $width) {
+        @content;
+    }
+
+
+
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +17,9 @@
 }
 
 html {
-    overflow: hidden;
+    overflow-x: hidden;
 }
+
 
 
 
@@ -16,11 +29,19 @@ body {
     font-family: 'Barlow', ;
     overflow: hidden;
 
+
+
+
 }
 
 .container {
     width: 80%;
     margin: auto;
+
+    @include mq(1300px) {
+        width: 96%;
+
+    }
 }
 
 .bg {
@@ -143,12 +164,40 @@ ul {
     justify-content: space-between;
     margin-top: 100px;
 
+
+    @include mq(1075px) {
+        flex-direction: column-reverse;
+    }
+
     img {
-        width: 150%;
+        width: 130%;
         position: relative;
 
 
-        left: 15%;
+        left: 25%;
+
+        @include mq(1300px) {
+            left: 9%;
+
+        }
+
+        @include mq(1075px) {
+            width: 100vw;
+            left: 20%;
+        }
+
+        @include mq(720px) {
+            width: 120vw;
+            left: 10%;
+        }
+
+        @include mq(500px) {
+            width: 140vw;
+            left: -5%;
+        }
+
+
+
 
 
     }
@@ -158,6 +207,13 @@ ul {
 
 .textarea {
     margin-top: 50px;
+    width: 60%;
+    margin-bottom: 40px;
+
+    @include mq(1075px) {
+        width: 100%;
+    }
+
 
     &__lists {
         margin-bottom: 20px;
@@ -196,6 +252,7 @@ ul {
         color: hsl(230, 29%, 20%);
         line-height: 100%;
         margin-bottom: 20px;
+        transition: all .7s ease-in-out;
     }
 
     &__smallh {

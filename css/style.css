@@ -3,7 +3,7 @@
   padding: 0; }
 
 html {
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 body {
   margin: auto;
@@ -13,6 +13,9 @@ body {
 .container {
   width: 80%;
   margin: auto; }
+  @media (max-width: 1300px) {
+    .container {
+      width: 96%; } }
 
 .bg {
   height: 400px;
@@ -91,13 +94,36 @@ ul a {
   display: flex;
   justify-content: space-between;
   margin-top: 100px; }
+  @media (max-width: 1075px) {
+    .flex {
+      flex-direction: column-reverse; } }
   .flex img {
-    width: 150%;
+    width: 130%;
     position: relative;
-    left: 15%; }
+    left: 25%; }
+    @media (max-width: 1300px) {
+      .flex img {
+        left: 9%; } }
+    @media (max-width: 1075px) {
+      .flex img {
+        width: 100vw;
+        left: 20%; } }
+    @media (max-width: 720px) {
+      .flex img {
+        width: 120vw;
+        left: 10%; } }
+    @media (max-width: 500px) {
+      .flex img {
+        width: 140vw;
+        left: -5%; } }
 
 .textarea {
-  margin-top: 50px; }
+  margin-top: 50px;
+  width: 60%;
+  margin-bottom: 40px; }
+  @media (max-width: 1075px) {
+    .textarea {
+      width: 100%; } }
   .textarea__lists {
     margin-bottom: 20px; }
     .textarea__lists il {
@@ -123,7 +149,8 @@ ul a {
     font-weight: 900;
     color: #242942;
     line-height: 100%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    transition: all .7s ease-in-out; }
   .textarea__smallh {
     font-size: 19px;
     font-weight: 400;
