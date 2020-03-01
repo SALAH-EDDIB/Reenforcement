@@ -53,25 +53,46 @@ body {
     right: 0;
     z-index: -10;
     border-bottom-left-radius: 100px;
+
+    @include mq(845px) {
+        height: 490px;
+
+    }
+
+    @include mq(400px) {
+        height: 450px;
+
+    }
 }
 
 ul {
     a {
         text-decoration: none;
+
+
+        color: black;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 550;
+        transition: .7s;
     }
 }
 
-.nav-link {
+.lists__link {
     position: relative;
     margin: 0;
     padding: 0;
 
+    @include mq(845px) {
+        margin-bottom: 20px;
+    }
+
 
 
 
 }
 
-.nav-link::after {
+.lists__link::after {
     content: '';
     width: 0%;
     height: 3.2px;
@@ -84,7 +105,7 @@ ul {
     transition: all 500ms ease;
 }
 
-.nav-link:hover::after {
+.lists__link:hover::after {
     left: 0%;
     width: 100%;
 }
@@ -93,6 +114,11 @@ ul {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+
+    @include mq(845px) {
+        margin-top: 30px;
+    }
+
 
     &__logo {
         margin: 10px;
@@ -103,17 +129,100 @@ ul {
         margin: 10px;
 
 
+
+
+    }
+
+    .hide {
+        @include mq(845px) {
+            display: none;
+        }
+
+
+
+    }
+
+    .show {
+        @include mq(845px) {
+            display: flex;
+        }
+    }
+
+    &__burger {
+
+        display: none;
+
+        @include mq(845px) {
+            width: 30px;
+            display: initial;
+            position: absolute;
+            right: 30px;
+            top: 45px;
+
+
+        }
+    }
+
+    &__close {
+        display: none;
+
+        @include mq(845px) {
+            width: 30px;
+            display: initial;
+            position: absolute;
+            right: 30px;
+            top: 40px;
+            display: none;
+
+
+
+        }
     }
 }
 
 .lists {
+
+    @include mq(845px) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        right: 28vw;
+        top: 110px;
+        text-align: center;
+
+        padding: 30px 100px;
+        z-index: 100;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: none;
+
+
+
+    }
+
+    @include mq(620px) {
+        right: 19%;
+
+    }
+
+    @include mq(470px) {
+        right: 11%;
+    }
+
+    @include mq(395px) {
+        right: 6%;
+    }
+
     &__list {
         margin: 0 20px;
         font-size: 18px;
         font-weight: 900;
-        position: relative;
+        // position: relative;
         color: hsl(230, 29%, 20%);
         transition: all 300ms;
+
+        @include mq(845px) {}
 
         &:hover {
             color: hsl(0, 100%, 66%);
@@ -122,6 +231,14 @@ ul {
         &--bfr {
             margin-left: 90px;
             color: hsl(230, 11%, 40%);
+            position: relative;
+
+            @include mq(845px) {
+                margin: auto;
+                top: 10px;
+            }
+
+
 
 
             &::before {
@@ -134,6 +251,16 @@ ul {
                 top: 10px;
                 right: 100px;
 
+                @include mq(845px) {
+                    top: -10px;
+                    right: -100px;
+                    width: 250px;
+                    border-radius: initial;
+                    height: 1px;
+
+                }
+
+
 
 
             }
@@ -143,21 +270,7 @@ ul {
     }
 }
 
-ul {
-    a {
-        text-decoration: none;
 
-        color: black;
-        font-size: 15px;
-        text-transform: uppercase;
-        font-weight: 550;
-        transition: .7s;
-    }
-
-
-
-
-}
 
 .flex {
     display: flex;
@@ -175,6 +288,11 @@ ul {
 
 
         left: 25%;
+
+        @include mq(845px) {
+            bottom: 50px;
+
+        }
 
         @include mq(1300px) {
             left: 9%;
@@ -252,7 +370,16 @@ ul {
         color: hsl(230, 29%, 20%);
         line-height: 100%;
         margin-bottom: 20px;
-        transition: all .7s ease-in-out;
+        transition: all .3s ease-in-out;
+
+        @include mq(610px) {
+            font-size: 45px;
+        }
+
+        @include mq(445px) {
+            font-size: 35px;
+        }
+
     }
 
     &__smallh {
@@ -261,6 +388,10 @@ ul {
         color: hsl(230, 11%, 40%);
         margin-bottom: 50px;
         width: 55%;
+
+        @include mq(445px) {
+            width: 65%;
+        }
     }
 
     &__btn {

@@ -26,16 +26,30 @@ body {
   right: 0;
   z-index: -10;
   border-bottom-left-radius: 100px; }
+  @media (max-width: 845px) {
+    .bg {
+      height: 490px; } }
+  @media (max-width: 400px) {
+    .bg {
+      height: 450px; } }
 
 ul a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+  transition: .7s; }
 
-.nav-link {
+.lists__link {
   position: relative;
   margin: 0;
   padding: 0; }
+  @media (max-width: 845px) {
+    .lists__link {
+      margin-bottom: 20px; } }
 
-.nav-link::after {
+.lists__link::after {
   content: '';
   width: 0%;
   height: 3.2px;
@@ -47,7 +61,7 @@ ul a {
   border-radius: 10px;
   transition: all 500ms ease; }
 
-.nav-link:hover::after {
+.lists__link:hover::after {
   left: 0%;
   width: 100%; }
 
@@ -55,23 +69,82 @@ ul a {
   display: flex;
   justify-content: space-between;
   margin-top: 60px; }
+  @media (max-width: 845px) {
+    .navbar {
+      margin-top: 30px; } }
   .navbar__logo {
     margin: 10px; }
   .navbar__lists {
     margin: 10px; }
+  @media (max-width: 845px) {
+    .navbar .hide {
+      display: none; } }
+  @media (max-width: 845px) {
+    .navbar .show {
+      display: flex; } }
+  .navbar__burger {
+    display: none; }
+    @media (max-width: 845px) {
+      .navbar__burger {
+        width: 30px;
+        display: initial;
+        position: absolute;
+        right: 30px;
+        top: 45px; } }
+  .navbar__close {
+    display: none; }
+    @media (max-width: 845px) {
+      .navbar__close {
+        width: 30px;
+        display: initial;
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        display: none; } }
+
+@media (max-width: 845px) {
+  .lists {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    right: 28vw;
+    top: 110px;
+    text-align: center;
+    padding: 30px 100px;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none; } }
+
+@media (max-width: 620px) {
+  .lists {
+    right: 19%; } }
+
+@media (max-width: 470px) {
+  .lists {
+    right: 11%; } }
+
+@media (max-width: 395px) {
+  .lists {
+    right: 6%; } }
 
 .lists__list {
   margin: 0 20px;
   font-size: 18px;
   font-weight: 900;
-  position: relative;
   color: #242942;
   transition: all 300ms; }
   .lists__list:hover {
     color: #ff5252; }
   .lists__list--bfr {
     margin-left: 90px;
-    color: #5b5f71; }
+    color: #5b5f71;
+    position: relative; }
+    @media (max-width: 845px) {
+      .lists__list--bfr {
+        margin: auto;
+        top: 10px; } }
     .lists__list--bfr::before {
       content: ' ';
       height: 7px;
@@ -81,14 +154,13 @@ ul a {
       position: absolute;
       top: 10px;
       right: 100px; }
-
-ul a {
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 550;
-  transition: .7s; }
+      @media (max-width: 845px) {
+        .lists__list--bfr::before {
+          top: -10px;
+          right: -100px;
+          width: 250px;
+          border-radius: initial;
+          height: 1px; } }
 
 .flex {
   display: flex;
@@ -101,6 +173,9 @@ ul a {
     width: 130%;
     position: relative;
     left: 25%; }
+    @media (max-width: 845px) {
+      .flex img {
+        bottom: 50px; } }
     @media (max-width: 1300px) {
       .flex img {
         left: 9%; } }
@@ -150,13 +225,22 @@ ul a {
     color: #242942;
     line-height: 100%;
     margin-bottom: 20px;
-    transition: all .7s ease-in-out; }
+    transition: all .3s ease-in-out; }
+    @media (max-width: 610px) {
+      .textarea__bigh {
+        font-size: 45px; } }
+    @media (max-width: 445px) {
+      .textarea__bigh {
+        font-size: 35px; } }
   .textarea__smallh {
     font-size: 19px;
     font-weight: 400;
     color: #5b5f71;
     margin-bottom: 50px;
     width: 55%; }
+    @media (max-width: 445px) {
+      .textarea__smallh {
+        width: 65%; } }
   .textarea__btn {
     padding: 14px 24px;
     border: none;
