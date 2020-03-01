@@ -1,0 +1,28 @@
+{
+  "name": "reenforcement",
+  "version": "1.0.0",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/main.scss css/style.css --watch",
+    "compil": "node-sass sass/main.scss css/style.comp.css",
+    "concat": "concat -o css/style.concat.css css/additional.css css/style.comp.css",
+    
+    "prefix": "postcss css/style.concat.css --use=autoprefixer --map=false --output=css/style.prefix.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SALAH-EDDIB/Reenforcement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SALAH-EDDIB/Reenforcement/issues"
+  },
+  "homepage": "https://github.com/SALAH-EDDIB/Reenforcement#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "concat": "^1.0.3",
+    "postcss-cli": "^7.1.0"
+  }
+}

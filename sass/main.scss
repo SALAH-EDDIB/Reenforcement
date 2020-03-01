@@ -1,0 +1,425 @@
+@mixin mq($width) {
+
+
+    @media (max-width: $width) {
+        @content;
+    }
+
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+
+
+body {
+
+    margin: auto;
+    font-family: 'Barlow', ;
+    overflow: hidden;
+
+
+
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+    @include mq(1300px) {
+        width: 96%;
+
+    }
+}
+
+.bg {
+    height: 400px;
+    width: 50%;
+    background-color: hsl(207, 33%, 95%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    border-bottom-left-radius: 100px;
+
+    @include mq(845px) {
+        height: 490px;
+
+    }
+
+    @include mq(400px) {
+        height: 450px;
+
+    }
+}
+
+ul {
+    a {
+        text-decoration: none;
+
+
+        color: black;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 550;
+        transition: .7s;
+    }
+}
+
+.lists__link {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    @include mq(845px) {
+        margin-bottom: 20px;
+    }
+
+
+
+
+}
+
+.lists__link::after {
+    content: '';
+    width: 0%;
+    height: 3.2px;
+    background: hsl(0, 100%, 68%);
+    position: absolute;
+    bottom: 0%;
+    top: 20px;
+    left: 50%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+}
+
+.lists__link:hover::after {
+    left: 0%;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    @include mq(845px) {
+        margin-top: 30px;
+    }
+
+
+    &__logo {
+        margin: 10px;
+
+    }
+
+    &__lists {
+        margin: 10px;
+
+
+
+
+    }
+
+    .hide {
+        @include mq(845px) {
+            display: none;
+        }
+
+
+
+    }
+
+    .show {
+        @include mq(845px) {
+            display: flex;
+        }
+    }
+
+    &__burger {
+
+        display: none;
+
+        @include mq(845px) {
+            width: 30px;
+            display: initial;
+            position: absolute;
+            right: 30px;
+            top: 45px;
+
+
+        }
+    }
+
+    &__close {
+        display: none;
+
+        @include mq(845px) {
+            width: 30px;
+            display: initial;
+            position: absolute;
+            right: 30px;
+            top: 40px;
+            display: none;
+
+
+
+        }
+    }
+}
+
+.lists {
+
+    @include mq(845px) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        right: 28vw;
+        top: 110px;
+        text-align: center;
+
+        padding: 30px 100px;
+        z-index: 100;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: none;
+
+
+
+    }
+
+    @include mq(620px) {
+        right: 19%;
+
+    }
+
+    @include mq(470px) {
+        right: 11%;
+    }
+
+    @include mq(395px) {
+        right: 6%;
+    }
+
+    &__list {
+        margin: 0 20px;
+        font-size: 18px;
+        font-weight: 900;
+        // position: relative;
+        color: hsl(230, 29%, 20%);
+        transition: all 300ms;
+
+        @include mq(845px) {}
+
+        &:hover {
+            color: hsl(0, 100%, 66%);
+        }
+
+        &--bfr {
+            margin-left: 90px;
+            color: hsl(230, 11%, 40%);
+            position: relative;
+
+            @include mq(845px) {
+                margin: auto;
+                top: 10px;
+            }
+
+
+
+
+            &::before {
+                content: ' ';
+                height: 7px;
+                width: 7px;
+                border-radius: 50%;
+                background-color: hsl(233, 6%, 73%);
+                position: absolute;
+                top: 10px;
+                right: 100px;
+
+                @include mq(845px) {
+                    top: -10px;
+                    right: -100px;
+                    width: 250px;
+                    border-radius: initial;
+                    height: 1px;
+
+                }
+
+
+
+
+            }
+        }
+
+
+    }
+}
+
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+
+    @include mq(1075px) {
+        flex-direction: column-reverse;
+    }
+
+    img {
+        width: 130%;
+        position: relative;
+
+
+        left: 25%;
+
+        @include mq(845px) {
+            bottom: 50px;
+
+        }
+
+        @include mq(1300px) {
+            left: 9%;
+
+        }
+
+        @include mq(1075px) {
+            width: 100vw;
+            left: 20%;
+        }
+
+        @include mq(720px) {
+            width: 120vw;
+            left: 10%;
+        }
+
+        @include mq(500px) {
+            width: 140vw;
+            left: -5%;
+        }
+
+
+
+
+
+    }
+}
+
+
+
+.textarea {
+    margin-top: 50px;
+    width: 60%;
+    margin-bottom: 40px;
+
+    @include mq(1075px) {
+        width: 100%;
+    }
+
+
+    &__lists {
+        margin-bottom: 20px;
+
+
+        il {
+            font-size: 17px;
+            margin-right: 2px;
+            margin-left: 2px;
+            padding: 4px 8px 5px;
+            text-transform: uppercase;
+            color: hsl(233, 6%, 73%);
+            cursor: pointer;
+            box-sizing: border-box;
+
+        }
+
+        .list1 {
+            background-color: hsl(230, 29%, 20%);
+            color: white;
+            padding: 4px 8px 5px;
+            border-radius: 15px;
+            font-weight: bold;
+            transition: background-color .3s ease-out;
+
+            box-sizing: border-box;
+        }
+
+
+    }
+
+    &__bigh {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: hsl(230, 29%, 20%);
+        line-height: 100%;
+        margin-bottom: 20px;
+        transition: all .3s ease-in-out;
+
+        @include mq(610px) {
+            font-size: 45px;
+        }
+
+        @include mq(445px) {
+            font-size: 35px;
+        }
+
+    }
+
+    &__smallh {
+        font-size: 19px;
+        font-weight: 400;
+        color: hsl(230, 11%, 40%);
+        margin-bottom: 50px;
+        width: 55%;
+
+        @include mq(445px) {
+            width: 65%;
+        }
+    }
+
+    &__btn {
+        padding: 14px 24px;
+        border: none;
+        background-color: hsl(0, 100%, 68%);
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 5px;
+        text-shadow: .5px .5px 1px white;
+        text-transform: uppercase;
+        transition: all .7s;
+
+        &:hover {
+            background-color: rgb(255, 115, 115);
+            box-shadow: 0 4px 8px 0 rgba(252, 105, 105, .3), 0 6px 20px 0 rgba(252, 105, 105, .3);
+
+        }
+    }
+
+    &__spn {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: hsl(233, 6%, 73%);
+        font-weight: 400;
+        margin-left: 10px;
+
+    }
+
+}
