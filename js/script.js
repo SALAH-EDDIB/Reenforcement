@@ -10,8 +10,8 @@ var closeBurger = document.querySelector(".navbar__close");
 menuItem[1].addEventListener("click", selectItem);
 menuItem[0].addEventListener("click", selectItem1);
 menuItem[2].addEventListener("click", selectItem2);
-burger.addEventListener("click", humburger)
-closeBurger.addEventListener("click", closeHumburger)
+burger.addEventListener("click", humburger);
+closeBurger.addEventListener("click", closeHumburger);
 
 function selectItem() {
     this.classList.add("list1");
@@ -48,7 +48,8 @@ function selectItem2() {
 }
 
 function humburger() {
-    this.classList.remove("show")
+
+    this.classList.remove("show");
     menu.classList.add("show");
     this.classList.add("hide");
     closeBurger.classList.add("show");
@@ -58,9 +59,9 @@ function humburger() {
 }
 
 function closeHumburger() {
-    menu.classList.remove("show")
-    this.classList.remove("show")
-    burger.classList.add("show")
+    menu.classList.remove("show");
+    this.classList.remove("show");
+    burger.classList.add("show");
 
 
 }

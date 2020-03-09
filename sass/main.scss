@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
 
+
 }
 
 html {
@@ -28,6 +29,7 @@ body {
     margin: auto;
     font-family: 'Barlow', ;
     overflow: hidden;
+    // pointer-events: none;
 
 
 
@@ -135,7 +137,10 @@ ul {
 
     .hide {
         @include mq(845px) {
-            display: none;
+            opacity: 0;
+            pointer-events: none;
+
+
         }
 
 
@@ -144,7 +149,10 @@ ul {
 
     .show {
         @include mq(845px) {
-            display: flex;
+            opacity: 1;
+            pointer-events: painted;
+
+
         }
     }
 
@@ -158,6 +166,8 @@ ul {
             position: absolute;
             right: 30px;
             top: 45px;
+            transition: all .1s ease-in-out;
+
 
 
         }
@@ -172,7 +182,9 @@ ul {
             position: absolute;
             right: 30px;
             top: 40px;
-            display: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .1s ease-in-out;
 
 
 
@@ -195,7 +207,9 @@ ul {
         z-index: 100;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        display: none;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+        pointer-events: none;
 
 
 

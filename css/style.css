@@ -78,10 +78,12 @@ ul a {
     margin: 10px; }
   @media (max-width: 845px) {
     .navbar .hide {
-      display: none; } }
+      opacity: 0;
+      pointer-events: none; } }
   @media (max-width: 845px) {
     .navbar .show {
-      display: flex; } }
+      opacity: 1;
+      pointer-events: painted; } }
   .navbar__burger {
     display: none; }
     @media (max-width: 845px) {
@@ -90,7 +92,8 @@ ul a {
         display: initial;
         position: absolute;
         right: 30px;
-        top: 45px; } }
+        top: 45px;
+        transition: all .1s ease-in-out; } }
   .navbar__close {
     display: none; }
     @media (max-width: 845px) {
@@ -100,7 +103,9 @@ ul a {
         position: absolute;
         right: 30px;
         top: 40px;
-        display: none; } }
+        opacity: 0;
+        pointer-events: none;
+        transition: all .1s ease-in-out; } }
 
 @media (max-width: 845px) {
   .lists {
@@ -115,7 +120,9 @@ ul a {
     z-index: 100;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: none; } }
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    pointer-events: none; } }
 
 @media (max-width: 620px) {
   .lists {
